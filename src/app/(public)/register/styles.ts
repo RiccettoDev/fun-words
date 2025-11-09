@@ -64,6 +64,14 @@ const styles = StyleSheet.create({
     top: 60,
     right: 40,
   },
+  safeAreaView: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
 });
 
 export default styles;

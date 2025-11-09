@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
   placeholderHidden: {
     opacity: 0,
   },
+  errorText: {
+    color: "red",
+  },
 });
 
 export default styles;

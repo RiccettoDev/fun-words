@@ -2,14 +2,22 @@ import React, { useState } from "react";
 import { Text, TextInput, TextInputProps, View } from "react-native";
 import styles from "./styles";
 
-export default function Input({ placeholder, style, ...rest }: TextInputProps) {
-  const [value, setValue] = useState("");
+interface InputProps extends TextInputProps {
+  value?: string;
+  error?: string;
+}
+
+export default function Input({ placeholder, style, value = "", error, onChangeText, ...rest }: InputProps) {
+  const [isFocused, setIsFocused] = useState(false);
 
   return (
     <View style={styles.container}>
       <Text
         pointerEvents="none"
-        style={[styles.placeholder, !value ? styles.placeholderVisible : styles.placeholderHidden]}
+        style={[
+          styles.placeholder,
+          (!value && !isFocused) ? styles.placeholderVisible : styles.placeholderHidden
+        ]}
       >
         {placeholder}
       </Text>
@@ -17,11 +25,14 @@ export default function Input({ placeholder, style, ...rest }: TextInputProps) {
       <TextInput
         {...rest}
         value={value}
-        onChangeText={setValue}
-        // desativa o placeholder nativo
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+        onChangeText={onChangeText}
         placeholder=""
         style={[styles.input, style]}
       />
+
+      {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
 }
