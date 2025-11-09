@@ -7,7 +7,7 @@ import styles from "./styles";
 export default function App() {
 
   const handleClick = () => {
-    router.push("/auth");
+    router.push("/auth/page");
   }
  
   return (

@@ -1,3 +1,4 @@
+import colors from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -11,11 +12,12 @@ const styles = StyleSheet.create({
     height: 52,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#8f1fcf",
-    backgroundColor: "#e5cef2",
+    borderColor: colors.darkPurple,
+    backgroundColor: colors.midlePurple,
     paddingHorizontal: 12,
     fontSize: 16,
-    color: "#000",
+    color: colors.white,
+    fontWeight: "bold",
     zIndex: 0,
   },
   placeholder: {
@@ -23,8 +25,8 @@ const styles = StyleSheet.create({
     left: 12,
     top: 14,
     fontSize: 16,
-    fontWeight: "700",
-    color: "#8f1fcf",
+    fontWeight: "bold",
+    color: colors.white,
     opacity: 0.9,
     zIndex: 2,
   },

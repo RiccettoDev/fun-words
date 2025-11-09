@@ -1,16 +1,17 @@
+import colors from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.zinc,
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
   },
   container_logo: {
     width: "90%",
-    backgroundColor: "#e5cef2",
+    backgroundColor: colors.purple,
     alignItems: "center",
     justifyContent: "center",
     padding: 60,
@@ -25,14 +26,14 @@ const styles = StyleSheet.create({
     marginTop: 40,
     fontSize: 42,
     fontWeight: "900",
-    color: "#8f1fcf",
+    color: colors.darkPurple,
   },
   subtitle: {
     textAlign: "center",
     marginTop: 20,
     fontSize: 22,
     fontWeight: "500",
-    color: "#898989",
+    color: colors.gray,
   },
   container_button: {
     marginTop: 40,

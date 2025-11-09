@@ -1,10 +1,11 @@
+import colors from "@/constants/colors";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   button: {
     width: "100%",
-    height: 52,
-    backgroundColor: "#8f1fcf",
+    height: 60,
+    backgroundColor: colors.darkPurple,
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
   textButton: {
     fontSize: 24,
     fontWeight: "bold",
-    color: "#fff",
+    color: colors.white,
   },
 });
 

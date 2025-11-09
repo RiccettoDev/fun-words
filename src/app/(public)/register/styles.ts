@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     padding: 20,
-    paddingTop: 50,
+    paddingTop: 30,
   },
   label: {
     color: colors.zinc,
@@ -58,6 +58,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     paddingTop: 30,
+  },
+  buttonReturn: {
+    position: "absolute",
+    top: 60,
+    right: 40,
   },
 });
 
