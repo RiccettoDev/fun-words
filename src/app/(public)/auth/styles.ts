@@ -59,6 +59,14 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingTop: 30,
   },
+  safeAreaView: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
 });
 
 export default styles;
