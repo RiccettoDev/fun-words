@@ -1,6 +1,8 @@
+import { supabase } from "@/lib/supabase";
 import { Ionicons } from "@expo/vector-icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router } from "expo-router";
+import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import {
   Alert,
@@ -34,13 +36,32 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function Register() {
+  const [loading, setLoading] = useState(false);
+
   const { control, handleSubmit } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: RegisterForm) => {
-    // seu código aqui
-    Alert.alert("Dados", JSON.stringify(data));
+  const onSubmit = async (dataForm: RegisterForm) => {
+    setLoading(true)
+    const { data, error } = await supabase.auth.signUp({
+      email: dataForm.email,
+      password: dataForm.password,
+      options: {
+        data: {
+          name: dataForm.name,
+        }
+      }
+    })
+
+    if(error){
+      Alert.alert('Erro ao cadastrar', error.message)
+      setLoading(false)
+      return;
+    }
+
+    setLoading(false)
+    router.push("/(private)/home/page")
   };
 
   return (
@@ -115,7 +136,7 @@ export default function Register() {
 
             <View style={{ marginTop: 50 }}>
               {/* chame handleSubmit aqui */}
-              <Button title="Cadastrar" onPress={handleSubmit(onSubmit)} />
+              <Button title={loading ? 'Carregando...' : 'Cadastrar'} onPress={handleSubmit(onSubmit)} />
             </View>
 
             <View style={styles.register}>
