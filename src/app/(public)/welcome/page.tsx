@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import Button from "@/components/atoms/button";
 import logo from "@/img/welcome/11070.jpg";
 import { router } from "expo-router";
 import { Image, Text, View } from "react-native";

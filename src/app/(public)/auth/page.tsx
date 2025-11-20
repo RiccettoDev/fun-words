@@ -1,6 +1,6 @@
-import Button from "@/components/button";
-import Input from "@/components/input";
-import Link from "@/components/link";
+import Button from "@/components/atoms/button";
+import Input from "@/components/atoms/input";
+import Link from "@/components/atoms/link";
 import { supabase } from "@/lib/supabase";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router } from "expo-router";

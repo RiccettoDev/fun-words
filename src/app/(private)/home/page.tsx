@@ -2,7 +2,7 @@ import { useAuth } from "@/context/auth.context";
 import { supabase } from "@/lib/supabase";
 import { Alert, Text, View } from "react-native";
 
-import Button from "@/components/button";
+import Button from "@/components/atoms/button";
 import styles from "./styles";
 
 export default function Home() {

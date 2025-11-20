@@ -14,9 +14,9 @@ import {
 } from "react-native";
 import { z } from "zod";
 
-import Button from "@/components/button";
-import Input from "@/components/input";
-import Link from "@/components/link";
+import Button from "@/components/atoms/button";
+import Input from "@/components/atoms/input";
+import Link from "@/components/atoms/link";
 
 import colors from "@/constants/colors";
 import styles from "./styles";
