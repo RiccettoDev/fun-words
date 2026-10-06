@@ -1,3 +1,3 @@
 # FunWords
 
-Projeto de jogo tipo dicionário
+Projeto de jogo tipo dicionário para desenvolver
